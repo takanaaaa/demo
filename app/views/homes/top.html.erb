@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="header">
+    <h1>Fancomu</h1>
+    <nav>
+      <ol>
+        <li>
+          <%= link_to 'SIGN UP', new_user_registration_path %>
+        </li>
+        <li>
+          <%= link_to 'SIGN IN', new_user_session_path %>
+        </li>
+      </ol>
+    </nav>
+  </div>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <%= image_tag 'nophoto_thumbnail.png' %>
+      </div>
+      <div class="swiper-slide">
+        <%= image_tag 'nophoto_thumbnail.png' %>
+      </div>
+      <div class="swiper-slide">
+        <%= image_tag 'nophoto_thumbnail.png' %>
+      </div>
+      <div class="swiper-slide">
+        <%= image_tag 'nophoto_thumbnail.png' %>
+      </div>
+      <div class="swiper-slide">
+      <%= image_tag 'nophoto_thumbnail.png' %>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>

@@ -1,24 +1,31 @@
-# README
+# Facomu
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+ファン同士で情報の共有ができるサイトです。
 
-Things you may want to cover:
+### サイトテーマ
+ファン同士の交流
 
-* Ruby version
+### テーマを選んだ理由
+これまで漫画やアニメ、アイドルなどに好きになり、楽しさや感動、癒やしなどを感じて元気をもらってきました。
+コロナ禍でイベントの開催自粛や関連施設営業休止・縮小、公演・作品の公開延期などが相次いぐ中で、
+より気軽にファン同士が交流し、応援し続けられるサービスを生み出したいと思いこのテーマにしました。
 
-* System dependencies
+### ターゲットユーザ
+推しがいる人・ファン同士で情報を共有したいと考えている人。
 
-* Configuration
+### 主な利用シーン
+情報が公開された時やファン同士で交流したい時
 
-* Database creation
+## 設計書
 
-* Database initialization
 
-* How to run the test suite
+## チャレンジ要素一覧
+＜https://docs.google.com/spreadsheets/d/14Qb9ny-EV9rNA-noKiFcQG_hfoJJJpJrr2lmRFd7R78/edit?usp=sharing＞
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 開発環境
+- OS：Linux(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery
+- IDE：Cloud9

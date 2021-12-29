@@ -1,0 +1,55 @@
+// Place all the styles related to the homes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+@import "bootstrap";
+
+$cGray: #333333;
+
+.container {
+  margin: 50px auto;
+  position: relative;
+
+  .header {
+    padding-bottom: 50px;
+
+    h1 {
+      font-size: 7em;
+      color: $cGray;
+      letter-spacing: 10px;
+    }
+
+    nav {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      & > ol {
+        display: flex;
+        list-style: none;
+
+        & > li {
+          font-size: 30px;
+          padding: 5px 30px;
+
+          & > a {
+            color: $cGray;
+          }
+
+          &:nth-child(2) {
+            background-color: $cGray;
+            border-radius: 50px;
+
+            & > a {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
