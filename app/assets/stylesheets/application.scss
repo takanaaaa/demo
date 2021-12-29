@@ -15,15 +15,14 @@
  */
 
  @import "bootstrap";
- @import "homes";
+ 
+ $cGray: #333333;
 
  * {
-  font-family: 'Great Vibes', cursive;
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-family: 'Teko', sans-serif;
+font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Oswald', sans-serif;
  }
 
- $cGray: #535353;
 
 .swiper {
     width: 90%;
