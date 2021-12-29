@@ -1,0 +1,19 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+ @import "bootstrap";
+
+ $cGray: #333333;
+
+ .card-img-top {
+    height: 250px;
+    object-fit: cover;
+ }
+
+ #text-hidden {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
