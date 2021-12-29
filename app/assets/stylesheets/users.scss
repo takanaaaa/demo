@@ -23,7 +23,7 @@ $cGray: #333333;
 
   & > h1 {
     position: absolute;
-    top: 50px;
+    top: 0;
     left: 50px;
     color: $cGray;
   }
@@ -64,4 +64,12 @@ $cGray: #333333;
       color: $cGray;
       font-size: 20px;
     }
+}
+
+.profile_image {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border: 1px solid $cGray;
+  border-radius: 50%;
 }

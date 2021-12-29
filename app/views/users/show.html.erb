@@ -1,3 +1,4 @@
+<%= render "layouts/header" %>
 <div class="main-container">
   <%= attachment_image_tag @user, :home_image, fallback: "no-image.jpg", class: "main-visual" %>
   <% if @user == current_user %>
@@ -27,7 +28,7 @@
         <p>Post</p>
       </dix>
       <dix class="mypage-nav-icon">
-        <i class="fas fa-cogs"></i>
+        <%= link_to "", edit_user_path(@user), class: "fas fa-cogs" %>
         <p>Setting</p>
       </dix>
     </div>
