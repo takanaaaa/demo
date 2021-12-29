@@ -1,33 +1,36 @@
 <div class="main-container">
   <%= attachment_image_tag @user, :home_image, fallback: "no-image.jpg", class: "main-visual" %>
-  <h1><%= @user.name %>のマイページ</h1>
-  <%= attachment_image_tag @user, :profile_image, fallback: "no-image.jpg", class: "profile_image" %>
-  <%= attachment_image_tag @user, :fave_image, fallback: "no-image.jpg", class: "fave_image" %>
-  <div class="date">出会ってから"date"</div>
-</div>
-<div class="mypage-nav-icons">
-  <dix class="mypage-nav-icon">
-    <i class="far fa-user"></i>
-    <p>Following</p>
-  </dix>
-  <dix class="mypage-nav-icon">
-    <i class="fas fa-user"></i>
-    <p>Follower</p>
-  </dix>
-  <dix class="mypage-nav-icon">
-    <i class="far fa-bookmark"></i>
-    <p>Bookmark</p>
-  </dix>
-  <dix class="mypage-nav-icon">
-    <i class="fas fa-calendar-alt"></i>
-    <p>Calender</p>
-  </dix>
-  <dix class="mypage-nav-icon">
-    <i class="far fa-clone"></i>
-    <p>Post</p>
-  </dix>
-  <dix class="mypage-nav-icon">
-    <i class="fas fa-cogs"></i>
-    <p>Setting</p>
-  </dix>
+  <% if @user == current_user %>
+    <h1><%= @user.name %>のマイページ</h1>
+    <%= attachment_image_tag @user, :profile_image, fallback: "no-image.jpg", class: "profile_image" %>
+    <%= attachment_image_tag @user, :fave_image, fallback: "no-image.jpg", class: "fave_image" %>
+    <div class="date">出会ってから"date"</div>
+    <div class="mypage-nav-icons">
+      <dix class="mypage-nav-icon">
+        <i class="far fa-user"></i>
+        <p>Following</p>
+      </dix>
+      <dix class="mypage-nav-icon">
+        <i class="fas fa-user"></i>
+        <p>Follower</p>
+      </dix>
+      <dix class="mypage-nav-icon">
+        <i class="far fa-bookmark"></i>
+        <p>Bookmark</p>
+      </dix>
+      <dix class="mypage-nav-icon">
+        <i class="fas fa-calendar-alt"></i>
+        <p>Calender</p>
+      </dix>
+      <dix class="mypage-nav-icon">
+        <i class="far fa-clone"></i>
+        <p>Post</p>
+      </dix>
+      <dix class="mypage-nav-icon">
+        <i class="fas fa-cogs"></i>
+        <p>Setting</p>
+      </dix>
+    </div>
+  <% else %>
+  <% end %>
 </div>
