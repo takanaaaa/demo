@@ -1,0 +1,67 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap";
+
+$cGray: #333333;
+
+.main-container {
+  width: 100%;
+  height: 500px;
+  position: relative;
+
+  & > .main-visual {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: .7;
+  }
+
+  & > h1 {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    color: $cGray;
+  }
+
+  & > .profile_image,
+  .fave_image{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 1px solid $cGray;
+    border-radius: 50%;
+    position: absolute;
+    top: 55%;
+  }
+
+  & > .profile_image {
+    left: 30%;
+  }
+
+  & > .fave_image {
+    right: 30%;
+  }
+
+  & > .date {
+    position: absolute;
+    top: 70%;
+    left: 45%;
+    color: $cGray;
+  }
+}
+
+.mypage-nav-icons {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+
+    & > mypage-nav-icon {
+      color: $cGray;
+      font-size: 20px;
+    }
+}
