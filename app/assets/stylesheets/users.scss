@@ -65,3 +65,11 @@ $cGray: #333333;
       font-size: 20px;
     }
 }
+
+.profile_image {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border: 1px solid $cGray;
+  border-radius: 50%;
+}
