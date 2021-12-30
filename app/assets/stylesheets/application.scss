@@ -23,6 +23,10 @@ font-family: 'Open Sans Condensed', sans-serif;
 font-family: 'Oswald', sans-serif;
  }
 
-.navbar {
-  height: 100px;
+.profile_image_sm {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border: 1px solid $cGray;
+  border-radius: 50%;
 }
