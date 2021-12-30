@@ -1,0 +1,8 @@
+<% users.each do |user| %>
+  <tr>
+    <th><%= attachment_image_tag user, :profile_image, fallback: "nophoto_thumbnail.png", size: "50x50", class: "rounded-circle" %></th>
+    <td><%= link_to user.name, user_path(user), class: "text-dark" %></td>
+    <td id ="profile-text-hidden"><%= user.profile %></td>
+    <td id ="follow-btn_<%= user.id %>"><%= render "relationships/follow-btn", user: user %></td>
+  </tr>
+<% end %>

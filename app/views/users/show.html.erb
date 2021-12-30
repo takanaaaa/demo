@@ -8,11 +8,11 @@
     <div class="date">出会ってから"date"</div>
     <div class="mypage-nav-icons">
       <dix class="mypage-nav-icon">
-        <i class="far fa-user"></i>
+        <%= link_to "", followings_path(user_id: @user.id), class: "far fa-user" %>
         <p>Following</p>
       </dix>
       <dix class="mypage-nav-icon">
-        <i class="fas fa-user"></i>
+        <%= link_to "", followers_path(user_id: @user.id), class: "fas fa-user" %>
         <p>Follower</p>
       </dix>
       <dix class="mypage-nav-icon">
