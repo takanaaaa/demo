@@ -8,11 +8,11 @@
     <div class="date">出会ってから"date"</div>
     <div class="mypage-nav-icons">
       <dix class="mypage-nav-icon">
-        <i class="far fa-user"></i>
+        <%= link_to "", followings_path(user_id: @user.id), class: "far fa-user" %>
         <p>Following</p>
       </dix>
       <dix class="mypage-nav-icon">
-        <i class="fas fa-user"></i>
+        <%= link_to "", followers_path(user_id: @user.id), class: "fas fa-user" %>
         <p>Follower</p>
       </dix>
       <dix class="mypage-nav-icon">
@@ -33,5 +33,10 @@
       </dix>
     </div>
   <% else %>
+    <%= attachment_image_tag @user, :profile_image, fallback: "no-image.jpg", class: "other_profile_image" %>
+    <h2><%= @user.name %>のマイページ</h2>
+    <div id="follow-btn_<%= @user.id %>">
+      <%= render "relationships/follow-btn", user: @user %>
+    </div>
   <% end %>
 </div>

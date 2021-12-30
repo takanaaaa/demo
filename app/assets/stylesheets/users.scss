@@ -25,6 +25,12 @@ $cGray: #333333;
     color: $cGray;
   }
 
+  & > h2 {
+    position: absolute;
+    bottom: 0;
+    left: 150px;
+  }
+
   & > .profile_image,
   .fave_image{
     width: 100px;
@@ -44,6 +50,17 @@ $cGray: #333333;
     right: 30%;
   }
 
+  & > .other_profile_image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 1px solid $cGray;
+    border-radius: 50%;
+    position: absolute;
+    top: 78%;
+    left: 30px;
+  }
+
   & > .date {
     position: absolute;
     top: 70%;
@@ -51,6 +68,8 @@ $cGray: #333333;
     color: $cGray;
   }
 }
+
+
 
 .mypage-nav-icons {
     display: flex;
