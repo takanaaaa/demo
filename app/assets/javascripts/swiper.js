@@ -1,6 +1,6 @@
+ /*global Swiper*/
 const swiper = new Swiper('.swiper', {
 
-  // Optional parameters
   direction: 'horizontal',
   speed: 1000,
   loop: true,
@@ -10,7 +10,6 @@ const swiper = new Swiper('.swiper', {
 	slidesPerGroup: 1,
 	spaceBetween: 0,
 
-  // If we need pagination
   pagination: {
     el: '.swiper-pagination',
   },
