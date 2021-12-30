@@ -33,5 +33,10 @@
       </dix>
     </div>
   <% else %>
+    <%= attachment_image_tag @user, :profile_image, fallback: "no-image.jpg", class: "other_profile_image" %>
+    <h2><%= @user.name %>のマイページ</h2>
+    <div id="follow-btn_<%= @user.id %>">
+      <%= render "relationships/follow-btn", user: @user %>
+    </div>
   <% end %>
 </div>
