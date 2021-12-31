@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :bookmarks, only: [:create, :destroy]
   end
   resources :groups, except: [:destroy] do
+    resources :messages, only: [:create, :index]
     get 'join' => 'groups#join'
     delete 'leave' => 'groups#leave'
   end

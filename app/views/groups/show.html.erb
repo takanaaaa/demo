@@ -5,6 +5,7 @@
       <div class="border">
         <%= simple_format @group.introduction %>
       </div>
+      <%= link_to "チャット", group_messages_path(@group), class: "btn" %>
       <div>
         <% if @group.group_member?(current_user)%>
         　<%= link_to "退出", group_leave_path(@group.id), method: :delete, class: "btn" %>
