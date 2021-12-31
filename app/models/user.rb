@@ -11,6 +11,8 @@ class User < ApplicationRecord
   has_many :following_user, through: :follower, source: :followed
   has_many :follower_user, through: :followed, source: :follower
   has_many :bookmarks, dependent: :destroy
+  has_many :group_users, dependent: :destroy
+  has_many :groups, dependent: :destroy
 
   attachment :profile_image
   attachment :home_image
@@ -27,4 +29,5 @@ class User < ApplicationRecord
   def following?(user)
     following_user.include?(user)
   end
+
 end
