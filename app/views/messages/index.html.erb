@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-7">
+      <table class="table" id="message">
+        <%= render "messages/messages", messages: @messages %>
+      </table>
+    </div>
+    <div class="col-md-5">
+      <div class="message_field form_group">
+        <%=form_with model:[@group, @message], remote:true do |f| %>
+          <%= f.text_area :content, class: "form_contol" %>
+          <%= f.submit "送信" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

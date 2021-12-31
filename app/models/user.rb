@@ -13,6 +13,8 @@ class User < ApplicationRecord
   has_many :bookmarks, dependent: :destroy
   has_many :group_users, dependent: :destroy
   has_many :groups, dependent: :destroy
+  has_many :messages
+
 
   attachment :profile_image
   attachment :home_image
