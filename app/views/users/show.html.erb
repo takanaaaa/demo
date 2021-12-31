@@ -16,7 +16,7 @@
         <p>Follower</p>
       </dix>
       <dix class="mypage-nav-icon">
-        <i class="far fa-bookmark"></i>
+        <%= link_to "", user_bookmarks_path(@user.id), class: "far fa-bookmark" %>
         <p>Bookmark</p>
       </dix>
       <dix class="mypage-nav-icon">
