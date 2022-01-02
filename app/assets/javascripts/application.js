@@ -18,13 +18,3 @@
 
 //= require jquery_ujs
 //= require_tree .
-
-window.onload = function() {
-document.addEventListener("turbolinks:load", () => {
-    function scrollToEnd() {
-        const message = document.getElementById('message');
-        message.scrollTop = message.scrollHeight;
-    }
-    scrollToEnd()
-})
-};
