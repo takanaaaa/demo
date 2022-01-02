@@ -19,7 +19,6 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post_comments = @post.post_comments.all.order(created_at: :desc)
     @post_comment = PostComment.new
-    @bookmark = current_user.bookmarks.find_by(post_id: @post.id)
   end
 
   def index
