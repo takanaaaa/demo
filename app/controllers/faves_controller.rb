@@ -16,6 +16,8 @@ class FavesController < ApplicationController
   def show
     @fave = Fave.find(params[:id])
     @groups = Group.where(fave_id: @fave.id)
+    @fave_image = FaveImage.new
+    @fave_images = FaveImage.where(fave_id: @fave.id)
   end
 
   def index
