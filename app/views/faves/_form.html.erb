@@ -1,6 +1,6 @@
-<%= form_with model:[fave, group], local:true do |f| %>
+<%= form_with model:fave, local:true do |f| %>
   <div class="form-group">
-    <%= f.label :グループ名%>
+    <%= f.label :名前%>
     <%= f.text_field :name, class: "form-control" %>
   </div>
   <div class="form-group">
@@ -8,6 +8,6 @@
     <%= f.text_area :introduction, rows: "15", class: "form-control" %>
   </div>
   <div class="form-group">
-    <%= f.submit "投稿" %>
+    <%= f.submit "作成" %>
   </div>
 <% end %>

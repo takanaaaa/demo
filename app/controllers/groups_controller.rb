@@ -3,13 +3,16 @@ class GroupsController < ApplicationController
 
   def new
     @group = Group.new
+    @fave = Fave.find(params[:fafe_id])
   end
 
   def create
     @group = Group.new(group_params)
     @group.owner_id = current_user.id
     @group.users << current_user
-    if @group.save
+    @fave = Fave.find(params[:fafe_id])
+    @group.fave_id = @fave.id
+    if @group.save!
       redirect_to group_path(@group), notice: "グループを作成しました。"
     else
       render :new
@@ -55,7 +58,7 @@ class GroupsController < ApplicationController
   def ensure_correct_user
     @group = Group.find(params[:id])
     unless @group.owner_id == currect_user.id
-      redirect_to groups_path
+      redirect_to posts_path
     end
   end
 end

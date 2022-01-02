@@ -1,0 +1,21 @@
+<%= render "layouts/header" %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-7">
+      <% @faves.each do |fave| %>
+        <div class="card">
+          <%= link_to fafe_path(fave) do %>
+            <%= attachment_image_tag fave, :image, fallback: "no-image.jpg", class: "profile_image_sm" %>
+          <% end %>
+          <%= fave.name %>
+          <div id="favorite-btn_<%= fave.id %>">
+            <%= render "favorites/favorite-btn", fave: fave %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="col-md-5">
+
+    </div>
+  </div>
+</div>

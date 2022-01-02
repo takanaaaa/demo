@@ -14,6 +14,7 @@ class User < ApplicationRecord
   has_many :group_users, dependent: :destroy
   has_many :groups, dependent: :destroy
   has_many :messages
+  has_one :favorite, dependent: :destroy
 
 
   attachment :profile_image

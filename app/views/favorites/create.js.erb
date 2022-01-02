@@ -1,0 +1,2 @@
+$("#favorite-btn_<%= @fave.id %>").html("<%= j(render 'favorites/favorite-btn', fave: @fave) %>");
+$("#favorite-btn_<%= @old_fave.id %>").html("<%= j(render 'favorites/favorite-btn', fave: @old_fave) %>");
