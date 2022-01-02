@@ -2,8 +2,49 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.message_field.form_group {
+
+ $cGray: #333333;
+
+.message_field {
+  border-bottom: 1px solid $cGray;
+  display: flex;
+
+  &.my-message {
+    flex-direction: row-reverse;
+  }
+
+  & > .profile_image_sm {
+    margin: 5px;
+  }
+
+  & > .message_text {
+    flex-grow: 1;
+
+    &.my-message {
+      flex-grow: 1;
+      text-align: end;
+    }
+  }
+
+  & > .message_date {
+    font-size: small;
+  }
+}
+
+.message_input.form_group {
   position: fixed;
   bottom: 50px;
-  right: 100px;
+  right: 50px;
+
+  & > form > input {
+    display: block;
+    padding: 5px 40px;
+    margin: 0 0 0 auto;
+    background: #333333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+  }
 }
+
+
