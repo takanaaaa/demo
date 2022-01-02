@@ -1,0 +1,7 @@
+<% if fave.favorited_by?(current_user) %>
+  <i class="fas fa-heart"></i>
+<% else %>
+  <%= link_to fafe_favorites_path(fave.id), method: :post, remote:true do %>
+    <i class="far fa-heart"></i>
+  <% end %>
+<% end %>

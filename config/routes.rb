@@ -7,9 +7,13 @@ Rails.application.routes.draw do
   end
   resources :posts do
     resources :post_comments, only: [:create, :destroy]
-    resources :bookmarks, only: [:create, :destroy]
+    resource :bookmarks, only: [:create, :destroy]
   end
-  resources :groups, except: [:destroy] do
+  resources :faves, except: [:destroy] do
+    resources :groups, except: [:show, :destroy]
+    resource :favorites, only: [:create,]
+  end
+  resources :groups, only: [:show] do
     resources :messages, only: [:create, :index]
     get 'join' => 'groups#join'
     delete 'leave' => 'groups#leave'

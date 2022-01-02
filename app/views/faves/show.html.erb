@@ -1,0 +1,33 @@
+<%= render "layouts/header" %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <%= attachment_image_tag @fave, :image, fallback: "no-image.jpg", class: "profile_image_sm" %>
+      <%= @fave.name %>
+      <div id="favorite-btn_<%= @fave.id %>">
+        <%= render "favorites/favorite-btn", fave: @fave %>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card">
+        <%= @fave.body %>
+      </div>
+      <% if @fave.favorited_by?(current_user)%>
+        <%= link_to "編集", edit_fafe_path(@fave.id)%>
+        <div class="card">
+          <table class="table">
+            <tbody>
+              <% @groups.each do |group| %>
+                <tr>
+                  <td><%= group.name %></td>
+                  <td><%= group.introduction %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+        <%= link_to "グループ作成", new_fafe_group_path(@fave.id) %>
+      <% end %>
+    </div>
+  </div>
+</div>
