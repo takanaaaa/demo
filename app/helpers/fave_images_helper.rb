@@ -1,0 +1,2 @@
+module FaveImagesHelper
+end

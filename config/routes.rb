@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :faves, except: [:destroy] do
     resources :groups, except: [:show, :destroy]
     resource :favorites, only: [:create,]
+    resources :fave_images, only: [:create]
   end
   resources :groups, only: [:show] do
     resources :messages, only: [:create, :index]

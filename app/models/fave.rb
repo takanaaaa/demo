@@ -1,6 +1,7 @@
 class Fave < ApplicationRecord
   has_many :groups, dependent: :destroy
   has_many :favorites, dependent: :destroy
+  has_many :fave_images, dependent: :destroy
 
   attachment :image
 
