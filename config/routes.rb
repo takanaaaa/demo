@@ -23,4 +23,6 @@ Rails.application.routes.draw do
   post 'unfollow/:id' => 'relationships#destroy', as: 'unfollow'
   get 'users/:user_id/followings' => 'relationships#followings', as: 'followings'
   get 'users/:user_id/followers' => 'relationships#followers', as: 'followers'
+  post 'fave_images/:fave_image_id/favorite_images' => 'favorite_images#create',as: 'favorite_images'
+  delete 'fave_images/:fave_image_id/favorite_images' => 'favorite_images#destroy', as: 'unfavorite_images'
 end

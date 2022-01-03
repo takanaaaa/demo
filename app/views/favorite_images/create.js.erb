@@ -1,0 +1,3 @@
+$("#fovorite-image-count_<%= @fave_image.id %>").html("いいね数:<%= @fave_image.favorite_images.count %>");
+$("#favorite-image-btn_<%= @fave_image.id %>").html("<%= j(render 'favorite_images/favorite-btn', fave_image: @fave_image) %>")
+$("#fave_images").html("<%= j(render 'faves/fave-images', fave_images: @fave_images) %>")
