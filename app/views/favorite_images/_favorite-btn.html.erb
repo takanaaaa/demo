@@ -1,0 +1,9 @@
+<% if fave_image.image_favorited_by?(current_user) %>
+  <%= link_to unfavorite_images_path(fave_image.id), method: :delete, remote:true do %>
+    <i class="fas fa-heart"></i>
+  <% end %>
+<% else %>
+  <%= link_to favorite_images_path(fave_image.id), method: :post, remote:true do %>
+    <i class="far fa-heart"></i>
+  <% end %>
+<% end %>

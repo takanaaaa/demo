@@ -1,0 +1,2 @@
+module FavoriteImagesHelper
+end

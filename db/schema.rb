@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_02_124338) do
+ActiveRecord::Schema.define(version: 2022_01_02_134211) do
 
   create_table "bookmarks", force: :cascade do |t|
     t.integer "user_id"
@@ -35,6 +35,15 @@ ActiveRecord::Schema.define(version: 2022_01_02_124338) do
     t.string "image_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "favorite_images", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "fave_image_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["fave_image_id"], name: "index_favorite_images_on_fave_image_id"
+    t.index ["user_id"], name: "index_favorite_images_on_user_id"
   end
 
   create_table "favorites", force: :cascade do |t|

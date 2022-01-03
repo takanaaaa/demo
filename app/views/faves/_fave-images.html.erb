@@ -1,0 +1,7 @@
+<% fave_images.each do |fave_image| %>
+  <%= attachment_image_tag fave_image, :image, fallback: "nophoto_thumbnail.png", size: "100x100" %>
+  <div id="favorite-image-btn_<%= fave_image.id %>">
+    <%= render "favorite_images/favorite-btn", fave_image: fave_image %>
+  </div>
+  <p id="fovorite-image-count_<%= fave_image.id %>">いいね数:<%= fave_image.favorite_images.count %></p>
+<% end %>

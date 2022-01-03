@@ -17,7 +17,9 @@ class FavesController < ApplicationController
     @fave = Fave.find(params[:id])
     @groups = Group.where(fave_id: @fave.id)
     @fave_image = FaveImage.new
-    @fave_images = FaveImage.where(fave_id: @fave.id)
+    @fave_images = FaveImage.includes(:image_favorited_users).where(fave_id: @fave.id).sort{|a,b|
+      b.image_favorited_users.size <=> a.image_favorited_users.size
+    }
   end
 
   def index
