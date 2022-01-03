@@ -14,21 +14,11 @@
   </div>
   <div class="swiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <%= image_tag 'no-image.jpg', size: "200x200"%>
-      </div>
-      <div class="swiper-slide">
-        <%= image_tag 'no-image.jpg', size: "200x200"%>
-      </div>
-      <div class="swiper-slide">
-        <%= image_tag 'no-image.jpg', size: "200x200"%>
-      </div>
-      <div class="swiper-slide">
-        <%= image_tag 'no-image.jpg', size: "200x200"%>
-      </div>
-      <div class="swiper-slide">
-        <%= image_tag 'no-image.jpg', size: "200x200"%>
-      </div>
+      <% @fava_top_images.each do |fave|%>
+        <div class="swiper-slide">
+          <%= attachment_image_tag fave, :image, fallback: "no-image.jpg" %>
+        </div>
+      <% end %>
     </div>
     <div class="swiper-pagination"></div>
   </div>
