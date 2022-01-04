@@ -20,7 +20,7 @@ $cGray: #333333;
 
   & > h1 {
     position: absolute;
-    top: 0;
+    top: 25px;
     left: 50px;
     color: $cGray;
   }
@@ -69,16 +69,50 @@ $cGray: #333333;
   }
 }
 
-
-
 .mypage-nav-icons {
-    display: flex;
-    justify-content: center;
-    gap: 70px;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 70px;
 
-    & > mypage-nav-icon {
-      color: $cGray;
-      font-size: 20px;
+  & > .mypage-nav-icon {
+    color: $cGray;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    color: #555555;
+    background: #f8f8f8;
+    text-decoration: none;
+    box-shadow: -8px -4px 6px #fff, 6px 4px 8px #dfe4ea;
+
+    &:hover {
+      box-shadow: 2px 2px 2px #dfe4ea inset, -2px -2px 2px 0px #fff inset;
     }
+  }
+}
+.user-nav-icons {
+  margin: 20px;
+  text-align: end;
+}
+
+.user-nav-icon {
+  color: $cGray;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  width: 90px;
+  height: 90px;
+  background: #f8f8f8;
+  box-shadow: -8px -4px 6px #fff, 6px 4px 8px #dfe4ea;
+
+  &:hover {
+    box-shadow: 2px 2px 2px #dfe4ea inset, -2px -2px 2px 0px #fff inset;
+    text-decoration: none;
+    color: #555555;
+  }
 }
 
