@@ -1,11 +1,9 @@
 <%= render "layouts/header" %>
 <div class="main-container">
   <%= attachment_image_tag @user, :home_image, fallback: "no-image.jpg", class: "main-visual" %>
+  <h1><%= @user.name %>のマイページ</h1>
+  <%= attachment_image_tag @user, :profile_image, fallback: "no-image.jpg", class: "profile_image" %>
   <% if @user == current_user %>
-    <h1><%= @user.name %>のマイページ</h1>
-    <%= attachment_image_tag @user, :profile_image, fallback: "no-image.jpg", class: "profile_image" %>
-    <%= attachment_image_tag @user, :fave_image, fallback: "no-image.jpg", class: "fave_image" %>
-    <div class="date">出会ってから"date"</div>
     <div class="mypage-nav-icons">
       <%= link_to followings_path(user_id: @user.id), class: "mypage-nav-icon" do %>
         <i class="far fa-user"></i>
@@ -33,8 +31,6 @@
       <% end %>
     </div>
   <% else %>
-    <%= attachment_image_tag @user, :profile_image, fallback: "no-image.jpg", class: "other_profile_image" %>
-    <h2><%= @user.name %>のマイページ</h2>
     <div class="user-nav-icons">
       <div id="follow-btn_<%= @user.id %>">
         <%= render "relationships/follow-btn", user: @user %>
